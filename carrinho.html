@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+</head>
+<body>
+    <section class="cart-section">
+        <h2>Carrinho</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="clearCart()">Esvaziar Carrinho</button>
+      </section>
+    </main>
+  
+    <script>
+      const menuItems = [
+      "Pão Francês",
+      "Pão de Queijo",
+      "Bolo de Chocolate",
+      "Bolo de Cenoura com Cobertura",
+      "Pastel de Carne",
+      "Pastel de Queijo",
+      "Café Puro",
+      "Café com Leite",
+      "Cappuccino",
+      "Suco Natural de Laranja",
+      "Pão Doce com Coco",
+      "Sonho com Creme",
+      "Croissant Simples",
+      "Croissant de Chocolate",
+      "Brioche",
+      "Empada de Frango",
+      "Torta de Limão",
+      "Torta de Morango",
+      "Quiche de Queijo",
+      "Bolo de Fubá",
+      "Pão Integral",
+      "Pão de Milho",
+      "Tostex de Presunto e Queijo",
+      "Baguete",
+      "Pão Australiano"
+      ];
+  
+      const menuList = document.getElementById("menu-list");
+      const cartItems = document.getElementById("cart-items");
+  
+      menuItems.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `${item} <button onclick="addToCart('${item}')">Adicionar</button>`;
+        menuList.appendChild(li);
+      });
+  
+      function addToCart(item) {
+        const li = document.createElement("li");
+        li.textContent = item;
+        cartItems.appendChild(li);
+      }
+  
+      function clearCart() {
+        cartItems.innerHTML = '';
+      }
+</script>
+
+</body>
+</html>

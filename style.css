@@ -1,0 +1,29 @@
+body{
+    
+}
+
+/* Navegação do cabeçalho */
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px; /* Espaço entre os itens */
+}
+
+.menu a {
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu .icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
